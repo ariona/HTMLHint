@@ -1,6 +1,6 @@
 export default {
   id: 'attr-no-duplication',
-  description: 'Elements cannot have duplicate attributes.',
+  description: 'Elemen tidak boleh memiliki atribut ganda.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -15,7 +15,7 @@ export default {
         attrName = attr.name;
         if (mapAttrName[attrName] === true) {
           reporter.error(
-            'Duplicate of attribute name [ ' + attr.name + ' ] was found.',
+            'Telah ditemukan nama atribut ganda dari [ ' + attr.name + ' ]',
             event.line,
             col + attr.index,
             self,

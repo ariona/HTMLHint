@@ -1,6 +1,6 @@
 export default {
   id: 'inline-script-disabled',
-  description: 'Inline script cannot be used.',
+  description: 'Tidak boleh menggunakan script inline.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -15,7 +15,7 @@ export default {
         attrName = attr.name.toLowerCase();
         if (reEvent.test(attrName) === true) {
           reporter.warn(
-            'Inline script [ ' + attr.raw + ' ] cannot be used.',
+            'Script inline [ ' + attr.raw + ' ] tidak boleh digunakan.',
             event.line,
             col + attr.index,
             self,

@@ -40,7 +40,7 @@ function testAgainstStringOrRegExp(value, comparison) {
 
 export default {
   id: 'attr-lowercase',
-  description: 'All attribute names must be in lowercase.',
+  description: 'Semua nama atribut harus ditulis dengan huruf kecil.',
   init: function(parser, reporter, options) {
     var self = this;
     var exceptions = Array.isArray(options) ? options : [];
@@ -56,7 +56,7 @@ export default {
           attrName !== attrName.toLowerCase()
         ) {
           reporter.error(
-            'The attribute name of [ ' + attrName + ' ] must be in lowercase.',
+            'Nama atribut [ ' + attrName + ' ] harus ditulis menggunakan huruf kecil.',
             event.line,
             col + attr.index,
             self,

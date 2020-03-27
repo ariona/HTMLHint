@@ -1,6 +1,6 @@
 export default {
   id: 'inline-style-disabled',
-  description: 'Inline style cannot be used.',
+  description: 'Tidak boleh menggunakan style inline.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -11,7 +11,7 @@ export default {
         attr = attrs[i];
         if (attr.name.toLowerCase() === 'style') {
           reporter.warn(
-            'Inline style [ ' + attr.raw + ' ] cannot be used.',
+            'Style inline [ ' + attr.raw + ' ] tidak boleh digunakan.',
             event.line,
             col + attr.index,
             self,

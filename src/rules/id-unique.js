@@ -1,6 +1,6 @@
 export default {
   id: 'id-unique',
-  description: 'The value of id attributes must be unique.',
+  description: 'Nilai dari atribut id harus unik.',
   init: function(parser, reporter) {
     var self = this;
     var mapIdCount = {};
@@ -21,7 +21,7 @@ export default {
             }
             if (mapIdCount[id] > 1) {
               reporter.error(
-                'The id value [ ' + id + ' ] must be unique.',
+                'Nilai id [ ' + id + ' ] harus unik.',
                 event.line,
                 col + attr.index,
                 self,

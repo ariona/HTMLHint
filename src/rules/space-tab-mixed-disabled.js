@@ -1,6 +1,6 @@
 export default {
   id: 'space-tab-mixed-disabled',
-  description: 'Do not mix tabs and spaces for indentation.',
+  description: 'Tidak boleh mencampur spasi dan tab untuk indentasi.',
   init: function(parser, reporter, options) {
     var self = this;
     var indentMode = 'nomix';
@@ -27,9 +27,9 @@ export default {
               whiteSpace.length % spaceLengthRequire !== 0
             ) {
               reporter.warn(
-                'Please use space for indentation and keep ' +
+                'Gunakan spasi untuk indentasi dan tetap gunakan ' +
                   spaceLengthRequire +
-                  ' length.',
+                  ' spasi.',
                 fixedPos.line,
                 1,
                 self,
@@ -39,7 +39,7 @@ export default {
           } else {
             if (/^ +$/.test(whiteSpace) === false) {
               reporter.warn(
-                'Please use space for indentation.',
+                'GUnakan spasi untuk indentasi.',
                 fixedPos.line,
                 1,
                 self,
@@ -49,7 +49,7 @@ export default {
           }
         } else if (indentMode === 'tab' && /^\t+$/.test(whiteSpace) === false) {
           reporter.warn(
-            'Please use tab for indentation.',
+            'Gunakan tab untuk indentasi.',
             fixedPos.line,
             1,
             self,
@@ -57,7 +57,7 @@ export default {
           );
         } else if (/ +\t|\t+ /.test(whiteSpace) === true) {
           reporter.warn(
-            'Do not mix tabs and spaces for indentation.',
+            'Jangan mencampir tab dan spasi untuk indentasi.',
             fixedPos.line,
             1,
             self,

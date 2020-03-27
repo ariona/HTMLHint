@@ -1,7 +1,7 @@
 export default {
   id: 'attr-whitespace',
   description:
-    'All attributes should be separated by only one space and not have leading/trailing whitespace.',
+    'Semua atribut harus dipisahkan dengan satu spasi dan tidak boleh diawali/diakhiri dengan spasi.',
   init: function(parser, reporter, options) {
     var self = this;
     var exceptions = Array.isArray(options) ? options : [];
@@ -21,9 +21,9 @@ export default {
         //Check first and last characters for spaces
         if (elem.value.trim(elem.value) !== elem.value) {
           reporter.error(
-            'The attributes of [ ' +
+            'Atribut [ ' +
               attrName +
-              ' ] must not have trailing whitespace.',
+              ' ] tidak boleh memiliki spasi diakhir',
             event.line,
             col + attr.index,
             self,
@@ -32,9 +32,9 @@ export default {
         }
         if (elem.value.replace(/ +(?= )/g, '') !== elem.value) {
           reporter.error(
-            'The attributes of [ ' +
+            'Atribut [ ' +
               attrName +
-              ' ] must be separated by only one space.',
+              ' ] harus dipisahkan hanya dengan 1 spasi.',
             event.line,
             col + attr.index,
             self,

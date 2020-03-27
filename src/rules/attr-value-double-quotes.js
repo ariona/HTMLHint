@@ -1,6 +1,6 @@
 export default {
   id: 'attr-value-double-quotes',
-  description: 'Attribute values must be in double quotes.',
+  description: 'Nilai atribut harus ditulis didalam tanda kutip ganda.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -14,9 +14,9 @@ export default {
           (attr.value === '' && attr.quote === "'")
         ) {
           reporter.error(
-            'The value of attribute [ ' +
+            'Nilai dari atribut [ ' +
               attr.name +
-              ' ] must be in double quotes.',
+              ' ] harus diapit dengan tanda kutip ganda.',
             event.line,
             col + attr.index,
             self,

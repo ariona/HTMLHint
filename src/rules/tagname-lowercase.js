@@ -1,6 +1,6 @@
 export default {
   id: 'tagname-lowercase',
-  description: 'All html element names must be in lowercase.',
+  description: 'Semua elemen html harus ditulis dengan huruf kecil.',
   init: function(parser, reporter, options) {
     var self = this;
     var exceptions = Array.isArray(options) ? options : [];
@@ -11,7 +11,7 @@ export default {
         tagName !== tagName.toLowerCase()
       ) {
         reporter.error(
-          'The html element name of [ ' + tagName + ' ] must be in lowercase.',
+          'Nama elemen html [ ' + tagName + ' ] harus menggunakan huruf kecil.',
           event.line,
           event.col,
           self,

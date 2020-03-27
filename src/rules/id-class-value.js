@@ -1,24 +1,24 @@
 export default {
   id: 'id-class-value',
   description:
-    'The id and class attribute values must meet the specified rules.',
+    'Nilai dari atribut id dan class harus memenuhi aturann spesifikasi.',
   init: function(parser, reporter, options) {
     var self = this;
     var arrRules = {
         underline: {
           regId: /^[a-z\d]+(_[a-z\d]+)*$/,
           message:
-            'The id and class attribute values must be in lowercase and split by an underscore.'
+            'Nilai dari atribut id dan class harus ditulis dengan huruf kecil dan dipisah dengan garis bawah (underscore).'
         },
         dash: {
           regId: /^[a-z\d]+(-[a-z\d]+)*$/,
           message:
-            'The id and class attribute values must be in lowercase and split by a dash.'
+            'Nilai dari atribut id dan class harus dutulis dengan huruf kecil dan dipisah dengan tanda pisah (dash/-).'
         },
         hump: {
           regId: /^[a-z][a-zA-Z\d]*([A-Z][a-zA-Z\d]*)*$/,
           message:
-            'The id and class attribute values must meet the camelCase style.'
+            'Nilai dari id dan atribut harus menggunakan gaya camelCase.'
         }
       },
       rule;

@@ -1,6 +1,6 @@
 export default {
   id: 'doctype-html5',
-  description: 'Invalid doctype. Use: "<!DOCTYPE html>"',
+  description: 'Doctype tidak valid. Gunakan: "<!DOCTYPE html>"',
   init: function(parser, reporter) {
     var self = this;
     function onComment(event) {
@@ -9,7 +9,7 @@ export default {
         event.content.toLowerCase() !== 'doctype html'
       ) {
         reporter.warn(
-          'Invalid doctype. Use: "<!DOCTYPE html>"',
+          'Doctype tidak valid. Gunakan: "<!DOCTYPE html>"',
           event.line,
           event.col,
           self,

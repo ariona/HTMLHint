@@ -1,6 +1,6 @@
 export default {
   id: 'tag-self-close',
-  description: 'Empty tags must be self closed.',
+  description: 'Tag kosong harus ditutup sendiri.',
   init: function(parser, reporter) {
     var self = this;
     var mapEmptyTags = parser.makeMap(
@@ -11,7 +11,7 @@ export default {
       if (mapEmptyTags[tagName] !== undefined) {
         if (!event.close) {
           reporter.warn(
-            'The empty tag : [ ' + tagName + ' ] must be self closed.',
+            'Tag kosong : [ ' + tagName + ' ] harus ditutup sendiri.',
             event.line,
             event.col,
             self,

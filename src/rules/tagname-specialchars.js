@@ -1,6 +1,6 @@
 export default {
   id: 'tagname-specialchars',
-  description: 'All html element names must be in lowercase.',
+  description: 'Semua nama elemen html harus menggunakan huruf kecil.',
   init: function(parser, reporter) {
     var self = this;
     var specialchars = /[^a-zA-Z0-9\-:_]/;
@@ -8,9 +8,9 @@ export default {
       var tagName = event.tagName;
       if (specialchars.test(tagName)) {
         reporter.error(
-          'The html element name of [ ' +
+          'Nama elemen html [ ' +
             tagName +
-            ' ] contains special character.',
+            ' ] mengandung karakter spesial.',
           event.line,
           event.col,
           self,

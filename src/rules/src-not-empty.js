@@ -1,6 +1,6 @@
 export default {
   id: 'src-not-empty',
-  description: 'The src attribute of an img(script,link) must have a value.',
+  description: 'Atribut src yang ada dalam img(script,link) harus memiliki nilai',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -18,11 +18,11 @@ export default {
           attr.value === ''
         ) {
           reporter.error(
-            'The attribute [ ' +
+            'Atribut [ ' +
               attr.name +
-              ' ] of the tag [ ' +
+              ' ] dalam tag [ ' +
               tagName +
-              ' ] must have a value.',
+              ' ] harus memiliki nilai.',
             event.line,
             col + attr.index,
             self,

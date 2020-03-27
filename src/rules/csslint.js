@@ -2,7 +2,7 @@ import { CSSLint } from 'csslint';
 
 export default {
   id: 'csslint',
-  description: 'Scan css with csslint.',
+  description: 'Pindai css dengan csslint.',
   init: function(parser, reporter, options) {
     var self = this;
     parser.addListener('cdata', function(event) {

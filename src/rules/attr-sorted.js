@@ -1,6 +1,6 @@
 export default {
   id: 'attr-sorted',
-  description: 'Attribute tags must be in proper order.',
+  description: 'Atribut tag harus memiliki urutan yang benar.',
   init: function(parser, reporter) {
     var self = this;
     var orderMap = {};
@@ -41,9 +41,9 @@ export default {
       });
       if (originalAttrs !== JSON.stringify(listOfAttributes)) {
         reporter.error(
-          'Inaccurate order ' +
+          'Urutan tidak akurat ' +
             originalAttrs +
-            ' should be in hierarchy ' +
+            ' seharusnya memiliki urutan ' +
             JSON.stringify(listOfAttributes) +
             ' ',
           event.line,

@@ -1,6 +1,6 @@
 export default {
   id: 'href-abs-or-rel',
-  description: 'An href attribute must be either absolute or relative.',
+  description: 'Atribut href harus berupa link absolut atau relatif.',
   init: function(parser, reporter, options) {
     var self = this;
 
@@ -20,9 +20,9 @@ export default {
               /^https?:\/\//.test(attr.value) === true)
           ) {
             reporter.warn(
-              'The value of the href attribute [ ' +
+              'Nilai dari atribut href [ ' +
                 attr.value +
-                ' ] must be ' +
+                ' ] harus ' +
                 hrefMode +
                 '.',
               event.line,

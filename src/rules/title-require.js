@@ -1,6 +1,6 @@
 export default {
   id: 'title-require',
-  description: '<title> must be present in <head> tag.',
+  description: 'Tag <title> harus ada di dalam tag <head>.',
   init: function(parser, reporter) {
     var self = this;
     var headBegin = false;
@@ -22,7 +22,7 @@ export default {
           (lastEvent.type === 'text' && /^\s*$/.test(lastEvent.raw) === true)
         ) {
           reporter.error(
-            '<title></title> must not be empty.',
+            'Tag <title></title> tidak boleh kosong.',
             event.line,
             event.col,
             self,
@@ -32,7 +32,7 @@ export default {
       } else if (tagName === 'head') {
         if (hasTitle === false) {
           reporter.error(
-            '<title> must be present in <head> tag.',
+            'Tag <title> harus ada di dalam tag <head>.',
             event.line,
             event.col,
             self,

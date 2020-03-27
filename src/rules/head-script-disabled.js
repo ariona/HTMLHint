@@ -1,6 +1,6 @@
 export default {
   id: 'head-script-disabled',
-  description: 'The <script> tag cannot be used in a <head> tag.',
+  description: 'Tag <script> tidak dapat digunakan dalam tag <head>.',
   init: function(parser, reporter) {
     var self = this;
     var reScript = /^(text\/javascript|application\/javascript)$/i;
@@ -18,7 +18,7 @@ export default {
         (!type || reScript.test(type) === true)
       ) {
         reporter.warn(
-          'The <script> tag cannot be used in a <head> tag.',
+          'Tag <script> tidak dapat digunakan dalam tag <head>.',
           event.line,
           event.col,
           self,

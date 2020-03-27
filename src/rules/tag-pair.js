@@ -1,6 +1,6 @@
 export default {
   id: 'tag-pair',
-  description: 'Tag must be paired.',
+  description: 'Tag harus memiliki pasangan.',
   init: function(parser, reporter) {
     var self = this;
     var stack = [],
@@ -33,11 +33,11 @@ export default {
         if (arrTags.length > 0) {
           var lastEvent = stack[stack.length - 1];
           reporter.error(
-            'Tag must be paired, missing: [ ' +
+            'Tag harus memiliki pasangan, Hilang: [ ' +
               arrTags.join('') +
-              ' ], start tag match failed [ ' +
+              ' ], tag pembuka tidak ditemukan [ ' +
               lastEvent.raw +
-              ' ] on line ' +
+              ' ] pada baris ' +
               lastEvent.line +
               '.',
             event.line,
@@ -49,7 +49,7 @@ export default {
         stack.length = pos;
       } else {
         reporter.error(
-          'Tag must be paired, no start tag: [ ' + event.raw + ' ]',
+          'Tag harus memiliki pasangan, tidak ditemukan tag pembuka: [ ' + event.raw + ' ]',
           event.line,
           event.col,
           self,
@@ -65,11 +65,11 @@ export default {
       if (arrTags.length > 0) {
         var lastEvent = stack[stack.length - 1];
         reporter.error(
-          'Tag must be paired, missing: [ ' +
+          'Tag harus memiliki pasangan, Hilang: [ ' +
             arrTags.join('') +
-            ' ], open tag match failed [ ' +
+            ' ], Tag pembuka untuk [ ' +
             lastEvent.raw +
-            ' ] on line ' +
+            ' ] pada barus ' +
             lastEvent.line +
             '.',
           event.line,

@@ -1,6 +1,6 @@
 export default {
   id: 'attr-unsafe-chars',
-  description: 'Attribute values cannot contain unsafe chars.',
+  description: 'Nilai atribut tidak boleh mengandung karakter tidak aman.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -18,9 +18,9 @@ export default {
             .replace(/%u/, '\\u')
             .replace(/%/, '\\x');
           reporter.warn(
-            'The value of attribute [ ' +
+            'Nilai dari atribut [ ' +
               attr.name +
-              ' ] cannot contain an unsafe char [ ' +
+              ' ] tidak boleh memiliki karakter tidak aman [ ' +
               unsafeCode +
               ' ].',
             event.line,

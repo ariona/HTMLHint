@@ -1,7 +1,7 @@
 export default {
   id: 'id-class-ad-disabled',
   description:
-    'The id and class attributes cannot use the ad keyword, it will be blocked by adblock software.',
+    'Atribut id dan class tidak boleh menggunakan kata kunci iklan/ad, karena akan diblokir olah piranti pemblokir iklan/ad.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -16,9 +16,9 @@ export default {
         if (/^(id|class)$/i.test(attrName)) {
           if (/(^|[-_])ad([-_]|$)/i.test(attr.value)) {
             reporter.warn(
-              'The value of attribute ' +
+              'Nilai dari atribut ' +
                 attrName +
-                ' cannot use the ad keyword.',
+                ' tidak boleh menggunakan kata kunci ad/iklan.',
               event.line,
               col + attr.index,
               self,

@@ -1,6 +1,6 @@
 export default {
   id: 'attr-value-not-empty',
-  description: 'All attributes must have values.',
+  description: 'Semua atribut harus memiliki nilai.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -11,7 +11,7 @@ export default {
         attr = attrs[i];
         if (attr.quote === '' && attr.value === '') {
           reporter.warn(
-            'The attribute [ ' + attr.name + ' ] must have a value.',
+            'Atribut [ ' + attr.name + ' ] harus memiliki nilai.',
             event.line,
             col + attr.index,
             self,

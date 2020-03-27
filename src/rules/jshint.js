@@ -2,7 +2,7 @@ import { JSHINT } from 'jshint';
 
 export default {
   id: 'jshint',
-  description: 'Scan script with jshint.',
+  description: 'Pindai script dengan jshint.',
   init: function(parser, reporter, options) {
     var self = this;
     parser.addListener('cdata', function(event) {

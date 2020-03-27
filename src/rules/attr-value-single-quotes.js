@@ -1,6 +1,6 @@
 export default {
   id: 'attr-value-single-quotes',
-  description: 'Attribute values must be in single quotes.',
+  description: 'Nilai atribut harus diapit dalam tanda kutip tunggal.',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('tagstart', function(event) {
@@ -14,9 +14,9 @@ export default {
           (attr.value === '' && attr.quote === '"')
         ) {
           reporter.error(
-            'The value of attribute [ ' +
+            'Nilai dari atribut [ ' +
               attr.name +
-              ' ] must be in single quotes.',
+              ' ] harus diapit dengan tanda kutip tunggal.',
             event.line,
             col + attr.index,
             self,

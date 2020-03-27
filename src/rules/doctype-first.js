@@ -1,6 +1,6 @@
 export default {
   id: 'doctype-first',
-  description: 'Doctype must be declared first.',
+  description: 'Doctype harus dideklarasikan terlebih dahulu.',
   init: function(parser, reporter) {
     var self = this;
     var allEvent = function(event) {
@@ -15,7 +15,7 @@ export default {
         /^DOCTYPE\s+/i.test(event.content) === false
       ) {
         reporter.error(
-          'Doctype must be declared first.',
+          'Doctype harus dideklarasikan terlebih dahulu.',
           event.line,
           event.col,
           self,

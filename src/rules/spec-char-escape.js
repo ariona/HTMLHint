@@ -1,6 +1,6 @@
 export default {
   id: 'spec-char-escape',
-  description: 'Special characters must be escaped.',
+  description: 'Karakter spesial harus di-escape',
   init: function(parser, reporter) {
     var self = this;
     parser.addListener('text', function(event) {
@@ -10,7 +10,7 @@ export default {
       while ((match = reSpecChar.exec(raw))) {
         var fixedPos = parser.fixPos(event, match.index);
         reporter.error(
-          'Special characters must be escaped : [ ' + match[0] + ' ].',
+          'Karakter spesial harus di-escape: [ ' + match[0] + ' ].',
           fixedPos.line,
           fixedPos.col,
           self,
